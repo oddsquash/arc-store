@@ -12,6 +12,11 @@ body {
   white-space: nowrap;
 }
 
+.navbar-nav > li {
+  float: none;
+  display: inline-block;
+}
+
 .card {
   border-style: none;
   background: transparent;

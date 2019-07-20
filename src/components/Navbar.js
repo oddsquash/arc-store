@@ -6,17 +6,17 @@ export default class Navbar extends Component {
   render() {
     return (
       <div className="container">
-        <nav className="navbar navbar-expand-sm navbar-light nav-font">
+        <nav className="navbar navbar-expand-lg navbar-light nav-font">
           <Link to="/">
             <img src={logo} id="logo" alt="logo" />
           </Link>
-          <ul className="navbar-nav align-items-center">
-            <li className="nav-item ml-5 ml-sm-auto">
+          <ul className="nav navbar-nav">
+            <li className="nav-item">
               <Link to="/" className="nav-link">
                 [ Shop ]
               </Link>
             </li>
-            <li className="nav-item ml-5 ml-sm-auto">
+            <li className="nav-item">
               <Link to="/contact" className="nav-link">
                 [ Contact Us ]
               </Link>

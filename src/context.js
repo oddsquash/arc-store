@@ -12,6 +12,13 @@ class ProductProvider extends Component {
     modalProduct: []
   };
 
+  componentWillMount() {
+    localStorage.getItem("detail") &&
+      this.setState({
+        detailProduct: JSON.parse(localStorage.getItem("detail"))
+      });
+  }
+
   componentDidMount() {
     this.setProducts();
   }
@@ -35,9 +42,10 @@ class ProductProvider extends Component {
 
   handleDetail = id => {
     const product = this.getItem(id);
-    this.setState(() => {
-      return { detailProduct: product };
-    });
+    this.setState(
+      { detailProduct: product },
+      localStorage.setItem("detail", JSON.stringify(product))
+    );
   };
 
   render() {

@@ -16,7 +16,6 @@ export default class Details extends Component {
               intro,
               desc,
               info,
-              instructions,
               price,
               title,
               inCart
@@ -37,6 +36,18 @@ export default class Details extends Component {
               },
               {
                 photo: moreImages[2],
+                number: 3,
+                caption: title,
+                subcaption: desc
+              },
+              {
+                photo: moreImages[3],
+                number: 3,
+                caption: title,
+                subcaption: desc
+              },
+              {
+                photo: moreImages[4],
                 number: 3,
                 caption: title,
                 subcaption: desc
@@ -64,7 +75,29 @@ export default class Details extends Component {
                     <p className="font-weight-bold mt-3 mb-0">Description:</p>
                     <p className="text-muted lead">{info}</p>
                     <p className="font-weight-bold mt-3 mb-0">Instructions:</p>
-                    <p className="text-muted lead">{instructions}</p>
+                    <ul
+                      style={{ listStyle: "none" }}
+                      className="text-muted lead pl-0 pt-1"
+                    >
+                      <li>
+                        <p>-Hand wash only</p>
+                      </li>
+                      <li>
+                        <p>-Do not soak</p>
+                      </li>
+                      <li>
+                        <p>-Towel dry</p>
+                      </li>
+                      <li>
+                        <p>-Apply wax mixture as needed</p>
+                      </li>
+                      <li>
+                        <h6>
+                          *Caution: People with a nut or tree nut allergy can be
+                          allergic to tung oil, but it is very rare.
+                        </h6>
+                      </li>
+                    </ul>
                     <div>
                       <Link to="/">
                         <button className="button pt-1 shadow-sm my-1 border-0 bg-transparent">
