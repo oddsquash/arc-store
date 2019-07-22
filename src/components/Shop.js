@@ -6,7 +6,7 @@ export default class Shop extends Component {
   render() {
     return (
       <>
-        <div className="py-5">
+        <div className="py-5 shop">
           <div className="container">
             <div className="row">
               <ProductConsumer>

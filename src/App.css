@@ -7,14 +7,41 @@ body {
   font-family: "Special Elite", cursive;
 }
 
+ul {
+  padding: 0;
+}
+
+#nav {
+  list-style: none;
+  display: flex;
+  width: 100%;
+  margin-top: 1rem;
+  justify-content: center;
+  align-items: center;
+}
+
+#nav li {
+  text-decoration: none;
+  color: white;
+}
+
+.nav-text {
+  color: #797d7f;
+  margin-left: 2rem;
+}
+
+.nav-text:hover {
+  text-decoration: none;
+  color: rgba(121, 125, 127, 0.575);
+}
+
+.nav-text:visited {
+  color: #797d7f;
+}
+
 .nav-font {
   overflow: hidden;
   white-space: nowrap;
-}
-
-.navbar-nav > li {
-  float: none;
-  display: inline-block;
 }
 
 .card {
@@ -62,4 +89,22 @@ body {
 
 button:focus {
   outline: none;
+}
+
+@media screen and (max-width: 474px) {
+  #logo {
+    height: 70%;
+    width: 70%;
+  }
+  .nav-text {
+    font-size: 3vw;
+    margin-left: 0;
+  }
+  .shop {
+    padding-top: 0 !important;
+  }
+  .card img {
+    height: 90%;
+    width: 90%;
+  }
 }
