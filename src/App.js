@@ -8,19 +8,22 @@ import Shop from "./components/Shop";
 import Contact from "./components/Contact";
 import Cart from "./components/Cart";
 import Details from "./components/Details";
+import ScrollToTop from "./components/Scroll";
 
 function App() {
   return (
     <>
       <ProductProvider>
         <Router>
-          <Navbar />
-          <Switch>
-            <Route path="/" exact component={Shop} />
-            <Route path="/contact" component={Contact} />
-            <Route path="/cart" component={Cart} />
-            <Route path="/details" component={Details} />
-          </Switch>
+          <ScrollToTop>
+            <Navbar />
+            <Switch>
+              <Route path="/" exact component={Shop} />
+              <Route path="/contact" component={Contact} />
+              <Route path="/cart" component={Cart} />
+              <Route path="/details" component={Details} />
+            </Switch>
+          </ScrollToTop>
         </Router>
       </ProductProvider>
     </>

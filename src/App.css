@@ -125,7 +125,7 @@ button:focus {
   }
   .nav-text {
     font-size: 3.5vw;
-    margin-left: 0;
+    margin: 0.3rem;
   }
   .shop {
     padding-top: 0 !important;

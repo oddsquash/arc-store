@@ -47,6 +47,11 @@ export default class Navbar extends Component {
               [ Contact Us ]
             </Link>
           </li>
+          <li>
+            <Link className="nav-text" to="/cart">
+              <i className="fas fa-shopping-cart mr-2" />
+            </Link>
+          </li>
         </ul>
       </div>
     );
