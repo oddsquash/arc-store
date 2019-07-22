@@ -91,20 +91,56 @@ button:focus {
   outline: none;
 }
 
-@media screen and (max-width: 474px) {
+.contact-col {
+  margin: 2rem auto;
+  padding: auto;
+  width: 40%;
+}
+
+.contact {
+  height: 100%;
+  width: 100%;
+  padding: auto;
+}
+
+.contact-photo {
+  border-radius: 25%;
+}
+
+.card-name {
+  font-size: 1.8rem;
+}
+
+.card-text {
+  font-size: 1rem;
+}
+
+.card-text a {
+  color: #66696b;
+}
+@media screen and (max-width: 450px) {
   #logo {
-    height: 70%;
-    width: 70%;
+    height: 90%;
+    width: 90%;
   }
   .nav-text {
-    font-size: 3vw;
+    font-size: 3.5vw;
     margin-left: 0;
   }
   .shop {
     padding-top: 0 !important;
   }
-  .card img {
+  .product img {
     height: 90%;
     width: 90%;
+  }
+  .contact-col {
+    width: 80%;
+  }
+  .card-name {
+    font-size: 1.1rem;
+  }
+  .card-text {
+    font-size: 0.7rem;
   }
 }
