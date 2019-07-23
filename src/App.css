@@ -1,5 +1,12 @@
+:root {
+  --background: #e7e7e7;
+  --lightGrey: #8a8989;
+  --mainGrey: #717577;
+  --darkGrey: ;
+}
+
 html {
-  background: rgb(231, 231, 231);
+  background: var(--background);
 }
 
 body {
@@ -7,6 +14,7 @@ body {
   font-family: "Special Elite", cursive;
 }
 
+/* Navigation */
 ul {
   padding: 0;
 }
@@ -20,13 +28,8 @@ ul {
   align-items: center;
 }
 
-#nav li {
-  text-decoration: none;
-  color: white;
-}
-
 .nav-text {
-  color: #797d7f;
+  color: var(--mainGrey);
   margin-left: 2rem;
 }
 
@@ -36,7 +39,7 @@ ul {
 }
 
 .nav-text:visited {
-  color: #797d7f;
+  color: var(--mainGrey);
 }
 
 .nav-font {
@@ -44,6 +47,7 @@ ul {
   white-space: nowrap;
 }
 
+/* Shop */
 .card {
   border-style: none;
   background: transparent;
@@ -80,7 +84,7 @@ ul {
 
 .desc-text {
   font-size: 0.9rem;
-  color: rgb(133, 133, 133);
+  color: var(--lightGrey);
 }
 
 .button {
@@ -91,6 +95,7 @@ button:focus {
   outline: none;
 }
 
+/* Contact Us page */
 .contact-col {
   margin: 2rem auto;
   padding: auto;
@@ -118,6 +123,36 @@ button:focus {
 .card-text a {
   color: #66696b;
 }
+
+/* Modal */
+.modal-container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.3);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+#modal {
+  background: var(--background);
+}
+
+.modal-text {
+  color: var(--mainGrey);
+}
+
+.modal-button {
+  background: transparent;
+  color: black;
+  margin: 0.8rem 0 0 0;
+  cursor: pointer;
+}
+
+/* Responsive sizing */
 @media screen and (max-width: 450px) {
   #logo {
     height: 90%;

@@ -6,9 +6,10 @@ import "./App.css";
 import Navbar from "./components/Navbar";
 import Shop from "./components/Shop";
 import Contact from "./components/Contact";
-import Cart from "./components/Cart";
+import Cart from "./components/Cart/Cart";
 import Details from "./components/Details";
 import ScrollToTop from "./components/Scroll";
+import Modal from "./components/Modal";
 
 function App() {
   return (
@@ -23,6 +24,7 @@ function App() {
               <Route path="/cart" component={Cart} />
               <Route path="/details" component={Details} />
             </Switch>
+            <Modal />
           </ScrollToTop>
         </Router>
       </ProductProvider>

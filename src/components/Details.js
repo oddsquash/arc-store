@@ -107,7 +107,7 @@ export default class Details extends Component {
                       <div>
                         <button
                           className="button pt-1 shadow-sm my-1 border-0 bg-transparent"
-                          disabled={true}
+                          disabled={inCart}
                           onClick={() => {
                             value.addToCart(id);
                             value.openModal(id);
