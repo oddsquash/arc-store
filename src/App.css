@@ -53,7 +53,7 @@ ul {
   background: transparent;
 }
 
-.product-text {
+.product-text-details {
   display: none;
   position: absolute;
   top: 37%;
@@ -64,6 +64,20 @@ ul {
   font-size: 2rem;
   color: white;
   letter-spacing: 0.3rem;
+}
+
+.product-text-sold {
+  position: absolute;
+  top: 1%;
+  right: 25%;
+  width: 50%;
+  text-align: center;
+  text-decoration: none;
+  font-size: 1.3rem;
+  color: white;
+  letter-spacing: 0.1rem;
+  background: rgba(0, 0, 0, 0.472);
+  border-radius: 4px;
 }
 
 .product-image {
@@ -152,6 +166,10 @@ button:focus {
   cursor: pointer;
 }
 
+/* Cart */
+.cart {
+  margin-top: 4rem;
+}
 /* Responsive sizing */
 @media screen and (max-width: 450px) {
   #logo {

@@ -18,7 +18,8 @@ export default class Details extends Component {
               info,
               price,
               title,
-              inCart
+              inCart,
+              sold
             } = value.detailProduct;
 
             const photos = [
@@ -66,7 +67,14 @@ export default class Details extends Component {
                     <Gallery images={photos} />
                   </div>
                   <div className="col-10 mx-auto col-md-6 my-3">
-                    <h2>{title}</h2>
+                    {!sold ? (
+                      <h2>{title}</h2>
+                    ) : (
+                      <>
+                        <h2>{title}</h2>
+                        <h3>[ Sold Out ]</h3>
+                      </>
+                    )}
                     <h4 className="text-muted">
                       Price : <span>$</span>
                       {price}
@@ -114,6 +122,18 @@ export default class Details extends Component {
                           }}
                         >
                           {inCart ? "[ In cart ]" : "[ Add to cart ]"}
+                          {/* {function() {
+                            switch (inCart) {
+                              case false && sold:
+                                return "[ Sold out ]";
+                              case true && !sold:
+                                return "[ In cart ]";
+                              case false && !sold:
+                                return "[ Add to cart ]";
+                              default:
+                                return null;
+                            }
+                          }} */}
                         </button>
                       </div>
                     </div>

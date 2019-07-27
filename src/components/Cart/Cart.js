@@ -3,6 +3,7 @@ import { ProductConsumer } from "../../context";
 import CartColumns from "./CartColumns";
 import CartList from "./CartList";
 import EmptyCart from "./EmptyCart";
+import CartTotals from "./CartTotals";
 
 export default class Cart extends Component {
   render() {
@@ -16,7 +17,7 @@ export default class Cart extends Component {
                 <>
                   <CartColumns />
                   <CartList value={value} />
-                  {/* <CartTotals value={value} history={this.props.history} /> */}
+                  <CartTotals value={value} history={this.props.history} />
                 </>
               );
             } else {
