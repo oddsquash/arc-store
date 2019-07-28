@@ -6,6 +6,9 @@ export default class MyApp extends React.Component {
     const onSuccess = payment => {
       // Congratulation, it came here means everything's fine!
       console.log("The payment was succeeded!", payment);
+      this.props.updateSold();
+      this.props.clearCart();
+      this.props.history.push("/");
       // You can bind the "payment" object's value to your state or props or whatever here, please see below for sample returned data
     };
 
@@ -28,7 +31,7 @@ export default class MyApp extends React.Component {
     // Document on Paypal's currency code: https://developer.paypal.com/docs/classic/api/currency_codes/
 
     const client = {
-      sandbox: "YOUR-SANDBOX-APP-ID",
+      sandbox: process.env.REACT_APP_APP_ID,
       production: "YOUR-PRODUCTION-APP-ID"
     };
     // In order to get production's app-ID, you will have to send your app to Paypal for approval first

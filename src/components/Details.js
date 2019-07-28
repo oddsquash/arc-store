@@ -79,6 +79,27 @@ export default class Details extends Component {
                       Price : <span>$</span>
                       {price}
                     </h4>
+                    <div>
+                      <button
+                        className="button pt-1 shadow-sm my-1 border-0 bg-transparent cart-button"
+                        disabled={inCart || sold}
+                        onClick={() => {
+                          value.addToCart(id);
+                          value.openModal(id);
+                        }}
+                      >
+                        {inCart
+                          ? "[ In Cart ]"
+                          : sold
+                          ? "[ Sold Out ]"
+                          : "[ Add to Cart ]"}
+                      </button>
+                      <Link to="/">
+                        <button className="button pt-1 shadow-sm my-1 border-0 bg-transparent">
+                          [ Back to products ]
+                        </button>
+                      </Link>
+                    </div>
                     <p className="text-muted lead">{intro}</p>
                     <p className="font-weight-bold mt-3 mb-0">Description:</p>
                     <p className="text-muted lead">{info}</p>
@@ -106,37 +127,6 @@ export default class Details extends Component {
                         </h6>
                       </li>
                     </ul>
-                    <div>
-                      <Link to="/">
-                        <button className="button pt-1 shadow-sm my-1 border-0 bg-transparent">
-                          [ Back to products ]
-                        </button>
-                      </Link>
-                      <div>
-                        <button
-                          className="button pt-1 shadow-sm my-1 border-0 bg-transparent"
-                          disabled={inCart}
-                          onClick={() => {
-                            value.addToCart(id);
-                            value.openModal(id);
-                          }}
-                        >
-                          {inCart ? "[ In cart ]" : "[ Add to cart ]"}
-                          {/* {function() {
-                            switch (inCart) {
-                              case false && sold:
-                                return "[ Sold out ]";
-                              case true && !sold:
-                                return "[ In cart ]";
-                              case false && !sold:
-                                return "[ Add to cart ]";
-                              default:
-                                return null;
-                            }
-                          }} */}
-                        </button>
-                      </div>
-                    </div>
                   </div>
                 </div>
               </div>

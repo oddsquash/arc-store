@@ -1,5 +1,6 @@
 :root {
   --background: #e7e7e7;
+  --button: #a4b7d460;
   --lightGrey: #8a8989;
   --mainGrey: #717577;
   --darkGrey: ;
@@ -101,12 +102,19 @@ ul {
   color: var(--lightGrey);
 }
 
+/* Details page */
 .button {
   cursor: pointer;
+  border-radius: 4px;
 }
 
 button:focus {
   outline: none;
+}
+
+.cart-button {
+  background-color: var(--button) !important;
+  margin-right: 1rem;
 }
 
 /* Contact Us page */
@@ -170,6 +178,7 @@ button:focus {
 .cart {
   margin-top: 4rem;
 }
+
 /* Responsive sizing */
 @media screen and (max-width: 450px) {
   #logo {

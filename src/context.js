@@ -32,9 +32,7 @@ class ProductProvider extends Component {
       const singleItem = { ...item };
       products = [...products, singleItem];
     });
-    this.setState(() => {
-      return { products };
-    });
+    this.setState({ products });
   };
 
   getItem = id => {
@@ -111,6 +109,16 @@ class ProductProvider extends Component {
     this.setState({ cartSubTotal: subTotal, cartTax: tax, cartTotal: total });
   };
 
+  updateSold = () => {
+    let products = [];
+    this.state.cart.forEach(item => {
+      const singleItem = { ...item };
+      singleItem.sold = true;
+      products = [...products, singleItem];
+    });
+    this.setState({ products });
+  };
+
   render() {
     return (
       <ProductContext.Provider
@@ -121,7 +129,8 @@ class ProductProvider extends Component {
           openModal: this.openModal,
           closeModal: this.closeModal,
           removeItem: this.removeItem,
-          clearCart: this.clearCart
+          clearCart: this.clearCart,
+          updateSold: this.updateSold
         }}
       >
         {this.props.children}
