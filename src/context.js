@@ -109,15 +109,15 @@ class ProductProvider extends Component {
     this.setState({ cartSubTotal: subTotal, cartTax: tax, cartTotal: total });
   };
 
-  updateSold = () => {
-    let products = [];
-    this.state.cart.forEach(item => {
-      const singleItem = { ...item };
-      singleItem.sold = true;
-      products = [...products, singleItem];
-    });
-    this.setState({ products });
-  };
+  // updateSold = () => {
+  //   let products = [];
+  //   this.state.cart.forEach(item => {
+  //     const singleItem = { ...item };
+  //     singleItem.sold = true;
+  //     products = [...products, singleItem];
+  //   });
+  //   this.setState({ products });
+  // };
 
   render() {
     return (
