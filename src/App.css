@@ -27,6 +27,7 @@ ul {
   margin-top: 1rem;
   justify-content: center;
   align-items: center;
+  box-shadow: 5px 8px 12px -2px gray;
 }
 
 .nav-text {
@@ -46,6 +47,16 @@ ul {
 .nav-font {
   overflow: hidden;
   white-space: nowrap;
+}
+
+/* Main Content */
+.content {
+  position: absolute;
+  top: 80px;
+  left: 0px;
+  right: 0px;
+  bottom: 0px;
+  overflow-y: scroll;
 }
 
 /* Shop */

@@ -18,12 +18,14 @@ function App() {
         <Router>
           <ScrollToTop>
             <Navbar />
-            <Switch>
-              <Route path="/" exact component={Shop} />
-              <Route path="/contact" component={Contact} />
-              <Route path="/cart" component={Cart} />
-              <Route path="/details" component={Details} />
-            </Switch>
+            <div className="content">
+              <Switch>
+                <Route path="/" exact component={Shop} />
+                <Route path="/contact" component={Contact} />
+                <Route path="/cart" component={Cart} />
+                <Route path="/details" component={Details} />
+              </Switch>
+            </div>
             <Modal />
           </ScrollToTop>
         </Router>
