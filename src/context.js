@@ -10,7 +10,7 @@ class ProductProvider extends Component {
     cart: [],
     modalOpen: false,
     cartSubTotal: 0,
-    cartTax: 0,
+    shipping: 0,
     cartTotal: 0
   };
 
@@ -18,6 +18,22 @@ class ProductProvider extends Component {
     localStorage.getItem("detail") &&
       this.setState({
         detailProduct: JSON.parse(localStorage.getItem("detail"))
+      });
+    localStorage.getItem("cart") &&
+      this.setState({
+        cart: JSON.parse(localStorage.getItem("cart"))
+      });
+    localStorage.getItem("subTotal") &&
+      this.setState({
+        cartSubTotal: JSON.parse(localStorage.getItem("subTotal"))
+      });
+    localStorage.getItem("shipping") &&
+      this.setState({
+        shipping: JSON.parse(localStorage.getItem("shipping"))
+      });
+    localStorage.getItem("total") &&
+      this.setState({
+        cartTotal: JSON.parse(localStorage.getItem("total"))
       });
   }
 
@@ -27,12 +43,17 @@ class ProductProvider extends Component {
 
   //   Copies the value instead of referencing them and changing the original data
   setProducts = () => {
-    let products = [];
-    storeProducts.forEach(item => {
-      const singleItem = { ...item };
-      products = [...products, singleItem];
-    });
-    this.setState({ products });
+    if (localStorage.getItem("products") === null) {
+      let products = [];
+      storeProducts.forEach(item => {
+        const singleItem = { ...item };
+        products = [...products, singleItem];
+      });
+      this.setState({ products });
+    } else {
+      let products = JSON.parse(localStorage.getItem("products"));
+      this.setState({ products });
+    }
   };
 
   getItem = id => {
@@ -57,11 +78,11 @@ class ProductProvider extends Component {
     const price = product.price;
     product.total = price;
     this.setState(
-      () => {
-        return { products: tempProducts, cart: [...this.state.cart, product] };
-      },
+      { products: tempProducts, cart: [...this.state.cart, product] },
       () => {
         this.addTotals();
+        localStorage.setItem("cart", JSON.stringify(this.state.cart));
+        localStorage.setItem("products", JSON.stringify(this.state.products));
       }
     );
   };
@@ -88,36 +109,68 @@ class ProductProvider extends Component {
     removedProduct.inCart = false;
     removedProduct.count = 0;
     removedProduct.total = 0;
-    this.setState({ cart: tempCart, products: tempProducts }, () =>
-      this.addTotals()
-    );
+    this.setState({ cart: tempCart, products: tempProducts }, () => {
+      this.addTotals();
+      localStorage.setItem("cart", JSON.stringify(this.state.cart));
+      localStorage.setItem("products", JSON.stringify(this.state.products));
+    });
   };
 
   clearCart = () => {
     this.setState({ cart: [] }, () => {
       this.setProducts();
       this.addTotals();
+      localStorage.setItem("cart", JSON.stringify(this.state.cart));
     });
   };
 
   addTotals = () => {
     let subTotal = 0;
     this.state.cart.map(item => (subTotal += item.total));
-    const tempTax = subTotal * 0.1;
-    const tax = parseFloat(tempTax.toFixed(2));
-    const total = subTotal + tax;
-    this.setState({ cartSubTotal: subTotal, cartTax: tax, cartTotal: total });
+    let shipping = 0;
+    this.state.cart.forEach(() => (shipping += 10));
+    let total = subTotal + shipping;
+    this.setState(
+      { cartSubTotal: subTotal, shipping, cartTotal: total },
+      () => {
+        localStorage.setItem(
+          "subTotal",
+          JSON.stringify(this.state.cartSubTotal)
+        );
+        localStorage.setItem("shipping", JSON.stringify(this.state.shipping));
+        localStorage.setItem("total", JSON.stringify(this.state.cartTotal));
+      }
+    );
   };
 
-  // updateSold = () => {
-  //   let products = [];
-  //   this.state.cart.forEach(item => {
-  //     const singleItem = { ...item };
-  //     singleItem.sold = true;
-  //     products = [...products, singleItem];
-  //   });
-  //   this.setState({ products });
-  // };
+  updateSold = () => {
+    // let products = [];
+    // this.state.cart.forEach(item => {
+    //   const singleItem = { ...item };
+    //   singleItem.sold = true;
+    //   products = [...products, singleItem];
+    // });
+    // this.setState({ products });
+
+    let tempProducts = [...this.state.products];
+    let tempCart = [...this.state.cart];
+    tempCart.forEach(item => {
+      let index = tempProducts.findIndex(obj => obj.id === item.id);
+      let soldProduct = tempProducts[index];
+      soldProduct.sold = true;
+      soldProduct.inCart = false;
+    });
+
+    // this.state.cart.forEach(item => {
+    //   const singleItem = { ...item };
+    //   singleItem.sold = true;
+    //   tempProducts = [...tempProducts, singleItem];
+    // });
+
+    this.setState({ products: tempProducts }, () => {
+      localStorage.setItem("products", JSON.stringify(this.state.products));
+    });
+  };
 
   render() {
     return (

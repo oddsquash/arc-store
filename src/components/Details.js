@@ -43,13 +43,13 @@ export default class Details extends Component {
               },
               {
                 photo: moreImages[3],
-                number: 3,
+                number: 4,
                 caption: title,
                 subcaption: desc
               },
               {
                 photo: moreImages[4],
-                number: 3,
+                number: 5,
                 caption: title,
                 subcaption: desc
               }
@@ -85,7 +85,7 @@ export default class Details extends Component {
                         disabled={inCart || sold}
                         onClick={() => {
                           value.addToCart(id);
-                          value.openModal(id);
+                          value.openModal();
                         }}
                       >
                         {inCart

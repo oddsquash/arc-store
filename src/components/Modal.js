@@ -7,11 +7,11 @@ export default class Modal extends Component {
     return (
       <ProductConsumer>
         {value => {
-          const { modalOpen, closeModal } = value;
+          const { modalOpen, closeModal, cart } = value;
 
           if (!modalOpen) {
             return null;
-          } else {
+          } else if (modalOpen && cart.length > 0) {
             return (
               <div className="modal-container">
                 <div className="container">
@@ -39,6 +39,33 @@ export default class Modal extends Component {
                           }}
                         >
                           [ Go to Cart ]
+                        </div>
+                      </Link>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            );
+          } else if (modalOpen && cart.length === 0) {
+            return (
+              <div className="modal-container">
+                <div className="container">
+                  <div className="row">
+                    <div
+                      id="modal"
+                      className="col-8 mx-auto col-md-6 col-lg-4 text-center p-5"
+                    >
+                      <h5 className="modal-text">
+                        Thank you for your purchase!
+                      </h5>
+                      <Link to="/">
+                        <div
+                          className="modal-button"
+                          onClick={() => {
+                            closeModal();
+                          }}
+                        >
+                          [ Back to Store ]
                         </div>
                       </Link>
                     </div>
