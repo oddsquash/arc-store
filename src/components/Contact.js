@@ -13,8 +13,9 @@ export default function Contact() {
             />
             <div className="card-body">
               <p className="card-name">
-                <strong>A</strong>dam and <strong>R</strong>achel{" "}
-                <strong>C</strong>oots
+                <span className="name">Adam</span> and{" "}
+                <span className="name">Rachel</span>{" "}
+                <span className="name">Coots</span>
               </p>
               <p className="card-text">Email: arc.woodworking@yahoo.com</p>
               <p className="card-text">

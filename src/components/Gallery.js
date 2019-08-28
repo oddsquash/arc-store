@@ -8,6 +8,7 @@ class Gallery extends Component {
     this.state = { galleryOpened: false };
     this.toggleGallery = this.toggleGallery.bind(this);
   }
+
   toggleGallery() {
     this.setState(prevState => ({
       galleryOpened: !prevState.galleryOpened

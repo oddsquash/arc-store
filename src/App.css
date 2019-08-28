@@ -148,6 +148,14 @@ button:focus {
   color: #66696b;
 }
 
+.name {
+  display: inline-block;
+}
+
+.name::first-letter {
+  font-weight: bolder;
+}
+
 /* Modal */
 .modal-container {
   position: fixed;

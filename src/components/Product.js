@@ -5,6 +5,7 @@ import { ProductConsumer } from "../context";
 export default class Product extends Component {
   render() {
     const { id, title, img, price, sold } = this.props.product;
+
     return (
       <div className="col-lg-6 col-12 mt-5">
         <div className="card product">
