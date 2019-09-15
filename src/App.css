@@ -1,18 +1,40 @@
 :root {
-  --background: #e7e7e7;
-  --button: #a4b7d460;
+  --lightBackground: #e7e7e7;
+  --darkBackground: #525252;
+  --cartButton: #a4b7d460;
+  --altButton: #9aa7ba53;
   --lightGrey: #8a8989;
-  --mainGrey: #717577;
+  --mainGrey: #717577c4;
   --darkGrey: ;
 }
 
-html {
-  background: var(--background);
+body {
+  font-family: "Special Elite", cursive;
 }
 
-body {
-  background: transparent;
-  font-family: "Special Elite", cursive;
+/* Light/Dark Mode */
+.light-mode {
+  background: var(--lightBackground);
+}
+
+.dark-mode {
+  background: var(--darkBackground);
+}
+
+.dark-mode .product-image {
+  box-shadow: 5px 5px 5px 2px rgb(50, 50, 50);
+}
+
+.dark-mode .dark-mode-text {
+  color: white !important;
+}
+
+.dark-mode .dark-mode-text :first-child {
+  color: white !important;
+}
+
+.dark-mode .dark-mode-title {
+  color: var(--lightGrey) !important;
 }
 
 /* Navigation */
@@ -24,7 +46,7 @@ ul {
   list-style: none;
   display: flex;
   width: 100%;
-  margin-top: 1rem;
+  padding-top: 1rem;
   justify-content: center;
   align-items: center;
 }
@@ -87,7 +109,7 @@ ul {
   box-shadow: 5px 5px 5px 2px rgb(151, 151, 151);
   width: 350px;
   height: 270px;
-  transition: 0.6s;
+  transition: filter 0.6s;
   opacity: 0.95;
 }
 
@@ -108,6 +130,7 @@ ul {
 .button {
   cursor: pointer;
   border-radius: 4px;
+  background-color: var(--altButton);
 }
 
 button:focus {
@@ -115,9 +138,13 @@ button:focus {
 }
 
 .cart-button {
-  background-color: var(--button) !important;
+  background-color: var(--cartButton) !important;
   margin-right: 1rem;
 }
+
+/* .alt-button {
+  background-color: var(--button) !important;
+} */
 
 /* Contact Us page */
 .contact-col {

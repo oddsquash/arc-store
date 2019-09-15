@@ -20,7 +20,7 @@ class Gallery extends Component {
       <>
         <div>
           <button
-            className="button pt-1 shadow-sm my-1 border-0 bg-transparent"
+            className="button pt-1 shadow-sm my-1 border-0 alt-button dark-mode-text"
             onClick={this.toggleGallery}
           >
             [ More photos ]

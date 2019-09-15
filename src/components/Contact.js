@@ -12,13 +12,15 @@ export default function Contact() {
               alt="adam"
             />
             <div className="card-body">
-              <p className="card-name">
+              <p className="card-name dark-mode-title">
                 <span className="name">Adam</span> and{" "}
                 <span className="name">Rachel</span>{" "}
                 <span className="name">Coots</span>
               </p>
-              <p className="card-text">Email: arc.woodworking@yahoo.com</p>
-              <p className="card-text">
+              <p className="card-text dark-mode-text">
+                Email: arc.woodworking@yahoo.com
+              </p>
+              <h6 className="dark-mode-text">
                 Sign up{" "}
                 <a
                   href="mailto:arc.woodworking@yahoo.com?Subject=Email subscription&body=Please add me to your mailing list!"
@@ -27,18 +29,7 @@ export default function Contact() {
                   [ here ]
                 </a>{" "}
                 to receive email updates when new products become available!
-              </p>
-              <p className="card-text">
-                Etsy Shop:{" "}
-                <a
-                  className="link"
-                  href="http://www.etsy.com/shop/ARCWoodworkingShop"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                >
-                  ARC Woodworking Shop
-                </a>
-              </p>
+              </h6>
             </div>
           </div>
         </div>

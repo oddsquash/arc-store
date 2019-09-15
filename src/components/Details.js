@@ -61,12 +61,12 @@ export default class Details extends Component {
                   <div className="col-10 mx-auto col-md-6 my-3">
                     <img
                       src={img}
-                      className="rounded img-fluid"
+                      className="rounded img-fluid dark"
                       alt="product"
                     />
                     <Gallery images={photos} />
                   </div>
-                  <div className="col-10 mx-auto col-md-6 my-3">
+                  <div className="col-10 mx-auto col-md-6 my-3 dark-mode-title">
                     {!sold ? (
                       <h2>{title}</h2>
                     ) : (
@@ -75,13 +75,13 @@ export default class Details extends Component {
                         <h3>[ Sold Out ]</h3>
                       </>
                     )}
-                    <h4 className="text-muted">
+                    <h4 className="text-muted dark-mode-title">
                       Price : <span>$</span>
                       {price}
                     </h4>
                     <div>
                       <button
-                        className="button pt-1 shadow-sm my-1 border-0 bg-transparent cart-button"
+                        className="button pt-1 shadow-sm my-1 border-0 bg-transparent cart-button dark-mode-text"
                         disabled={inCart || sold}
                         onClick={() => {
                           value.addToCart(id);
@@ -95,18 +95,18 @@ export default class Details extends Component {
                           : "[ Add to Cart ]"}
                       </button>
                       <Link to="/">
-                        <button className="button pt-1 shadow-sm my-1 border-0 bg-transparent">
+                        <button className="button pt-1 shadow-sm my-1 border-0 alt-button dark-mode-text">
                           [ Back to products ]
                         </button>
                       </Link>
                     </div>
-                    <p className="text-muted lead">{intro}</p>
+                    <p className="text-muted lead dark-mode-text">{intro}</p>
                     <p className="font-weight-bold mt-3 mb-0">Description:</p>
-                    <p className="text-muted lead">{info}</p>
+                    <p className="text-muted lead dark-mode-text">{info}</p>
                     <p className="font-weight-bold mt-3 mb-0">Instructions:</p>
                     <ul
                       style={{ listStyle: "none" }}
-                      className="text-muted lead pl-0 pt-1"
+                      className="text-muted lead pl-0 pt-1 dark-mode-text"
                     >
                       <li>
                         <p>-Hand wash only</p>

@@ -11,19 +11,36 @@ class ProductProvider extends Component {
     modalOpen: false,
     cartSubTotal: 0,
     shipping: 0,
-    cartTotal: 0
+    cartTotal: 0,
+    darkMode: false
   };
 
+  /**
+   * Component will mount.
+   */
   componentWillMount() {
     localStorage.getItem("state") &&
       this.setState(JSON.parse(localStorage.getItem("state")));
   }
 
+  /**
+   * Component did mount.
+   */
   componentDidMount() {
     this.setProducts();
   }
 
-  //   Copies the value instead of referencing them and changing the original data
+  /**
+   * Toggle dark mode.
+   */
+  toggleDarkMode = () => {
+    let darkMode = !this.state.darkMode;
+    this.setState({ darkMode });
+  };
+
+  /**
+   * Set products. Either from data.js or from local storage state object.
+   */
   setProducts = () => {
     if (localStorage.getItem("state") === null) {
       let products = [];
@@ -40,22 +57,34 @@ class ProductProvider extends Component {
     }
   };
 
+  /**
+   * Save state to local storage.
+   */
   saveState = () => {
     let newState = { ...this.state };
     delete newState.modalOpen;
     localStorage.setItem("state", JSON.stringify(newState));
   };
 
+  /**
+   * Get item based on id.
+   */
   getItem = id => {
     const product = this.state.products.find(item => item.id === id);
     return product;
   };
 
+  /**
+   * Updates the detail product.
+   */
   handleDetail = id => {
     const product = this.getItem(id);
     this.setState({ detailProduct: product }, () => this.saveState());
   };
 
+  /**
+   * Add to cart.
+   */
   addToCart = id => {
     let tempProducts = [...this.state.products];
     const index = tempProducts.indexOf(this.getItem(id)); // using getItem to return the index instead of the id
@@ -73,6 +102,9 @@ class ProductProvider extends Component {
     );
   };
 
+  /**
+   * Open modal.
+   */
   openModal = id => {
     const product = this.getItem(id);
     this.setState(() => {
@@ -80,10 +112,16 @@ class ProductProvider extends Component {
     });
   };
 
+  /**
+   * Close modal.
+   */
   closeModal = () => {
     this.setState({ modalOpen: false });
   };
 
+  /**
+   * Remove single item from cart.
+   */
   removeItem = id => {
     let tempProducts = [...this.state.products];
     let tempCart = [...this.state.cart];
@@ -99,6 +137,9 @@ class ProductProvider extends Component {
     });
   };
 
+  /**
+   * Removes all items from the cart.
+   */
   clearCart = () => {
     this.setState({ cart: [] }, () => {
       this.saveState();
@@ -107,6 +148,9 @@ class ProductProvider extends Component {
     });
   };
 
+  /**
+   * Add totals in the cart.
+   */
   addTotals = () => {
     let subTotal = 0;
     this.state.cart.map(item => (subTotal += item.total));
@@ -118,6 +162,9 @@ class ProductProvider extends Component {
     );
   };
 
+  /**
+   * Update a product to sold.
+   */
   updateSold = () => {
     let tempProducts = [...this.state.products];
     let tempCart = [...this.state.cart];
@@ -130,6 +177,9 @@ class ProductProvider extends Component {
     this.setState({ products: tempProducts }, () => this.saveState());
   };
 
+  /**
+   * Render.
+   */
   render() {
     return (
       <ProductContext.Provider
@@ -141,7 +191,8 @@ class ProductProvider extends Component {
           closeModal: this.closeModal,
           removeItem: this.removeItem,
           clearCart: this.clearCart,
-          updateSold: this.updateSold
+          updateSold: this.updateSold,
+          toggleDarkMode: this.toggleDarkMode
         }}
       >
         {this.props.children}

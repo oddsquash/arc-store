@@ -64,7 +64,7 @@ export const storeProducts = [
     info:
       "Made from Cherry, Walnut, and Maple hardwoods. Size: 20 x 6 x 0.75 inches. Sealed with 3 coats of Tung oil* and finished with a mixture of bees wax and mineral oil. Our boards come with a 1oz. tin of the bees wax and mineral oil mixture to keep your board healthy and looking beautiful.",
     inCart: false,
-    sold: false
+    sold: true
   }
 ];
 

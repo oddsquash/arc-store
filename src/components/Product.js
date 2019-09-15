@@ -42,9 +42,11 @@ export default class Product extends Component {
               )
             }
           </ProductConsumer>
-          <div className="desc-text">
-            <p className="text-center pt-3 mb-0">{title}</p>
-            <p className="text-center">${price}</p>
+          <div className="desc-text dark-mode-text">
+            <div>
+              <p className="text-center pt-3 mb-0">{title}</p>
+              <p className="text-center">${price}</p>
+            </div>
           </div>
         </div>
       </div>
