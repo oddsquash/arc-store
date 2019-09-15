@@ -1,7 +1,7 @@
 :root {
   --lightBackground: #e7e7e7;
   --darkBackground: #525252;
-  --cartButton: #a4b7d460;
+  --button: #a4b7d460;
   --altButton: #9aa7ba53;
   --lightGrey: #8a8989;
   --mainGrey: #717577c4;
@@ -70,6 +70,11 @@ ul {
   white-space: nowrap;
 }
 
+#nav div i {
+  cursor: pointer;
+  padding-right: 0.4rem;
+}
+
 /* Main Content */
 
 /* Shop */
@@ -130,7 +135,7 @@ ul {
 .button {
   cursor: pointer;
   border-radius: 4px;
-  background-color: var(--altButton);
+  background-color: var(--button);
 }
 
 button:focus {
@@ -142,15 +147,12 @@ button:focus {
   margin-right: 1rem;
 }
 
-/* .alt-button {
-  background-color: var(--button) !important;
-} */
-
 /* Contact Us page */
 .contact-col {
   margin: 2rem auto;
   padding: auto;
   width: 40%;
+  height: 100vh;
 }
 
 .contact {
@@ -214,6 +216,7 @@ button:focus {
 /* Cart */
 .cart {
   margin-top: 4rem;
+  height: 100vh;
 }
 
 /* Responsive sizing */
