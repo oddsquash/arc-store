@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import { Link } from "react-router-dom";
-import logo from "../logo.svg";
+import logo from "../logo-filled.svg";
 import { ProductConsumer } from "../context";
 
 export default class Navbar extends Component {

@@ -21,6 +21,7 @@ export default class Product extends Component {
                       src={img}
                       alt="product"
                       className="card-img-top product-image rounded"
+                      onLoad={this.props.imageLoaded}
                     />
                     <p className="product-text-sold">[ Sold Out ]</p>
                   </Link>
@@ -35,6 +36,7 @@ export default class Product extends Component {
                       src={img}
                       alt="product"
                       className="card-img-top product-image rounded"
+                      onLoad={this.props.imageLoaded}
                     />
                     <p className="product-text-details">[ Details ]</p>
                   </Link>

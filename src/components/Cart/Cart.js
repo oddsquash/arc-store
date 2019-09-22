@@ -8,7 +8,7 @@ import CartTotals from "./CartTotals";
 export default class Cart extends Component {
   render() {
     return (
-      <>
+      <div className="full-screen">
         <ProductConsumer>
           {value => {
             const { cart } = value;
@@ -25,7 +25,7 @@ export default class Cart extends Component {
             }
           }}
         </ProductConsumer>
-      </>
+      </div>
     );
   }
 }

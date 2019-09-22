@@ -1,18 +1,50 @@
 import React, { Component } from "react";
 import { ProductConsumer } from "../context";
 import Product from "./Product";
+import Loading from "./Loading";
 
 export default class Shop extends Component {
+  constructor(props) {
+    super(props);
+
+    this.state = {
+      isLoading: true
+    };
+  }
+
+  componentWillMount() {}
+
   render() {
+    const { isLoading } = this.state;
+    let count = 0;
+
+    /**
+     * Waits for all images to load.
+     */
+    const imageLoaded = () => {
+      count += 1;
+      if (count === 3) {
+        this.setState({ isLoading: false });
+      }
+    };
+
     return (
       <>
+        {isLoading && <Loading />}
+        {/* <Loading /> */}
         <div className="py-5 shop">
           <div className="container">
             <div className="row">
               <ProductConsumer>
                 {value => {
                   return value.products.map(product => {
-                    return <Product key={product.id} product={product} />;
+                    return (
+                      <Product
+                        key={product.id}
+                        product={product}
+                        imageLoaded={() => imageLoaded()}
+                      />
+                    );
                   });
                 }}
               </ProductConsumer>

@@ -1,3 +1,4 @@
+/* General */
 :root {
   --lightBackground: #e7e7e7;
   --darkBackground: #525252;
@@ -10,6 +11,24 @@
 
 body {
   font-family: "Special Elite", cursive;
+}
+
+.full-screen {
+  margin-top: 4rem;
+  height: 100vh;
+}
+
+.loading {
+  display: table;
+  width: 30%;
+  margin: auto;
+}
+
+.loading h1 {
+  display: table-cell;
+  vertical-align: middle;
+  width: auto;
+  transform: translateY(-65px);
 }
 
 /* Light/Dark Mode */
@@ -214,10 +233,6 @@ button:focus {
 }
 
 /* Cart */
-.cart {
-  margin-top: 4rem;
-  height: 100vh;
-}
 
 /* Responsive sizing */
 @media screen and (max-width: 450px) {
