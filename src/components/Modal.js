@@ -20,10 +20,12 @@ export default class Modal extends Component {
                       id="modal"
                       className="col-8 mx-auto col-md-6 col-lg-4 text-center p-5"
                     >
-                      <h5 className="modal-text">Item added to the Cart!</h5>
-                      <Link to="/">
+                      <h5 className="modal-text dark-mode-text">
+                        Item added to the Cart!
+                      </h5>
+                      <Link to="/" className="link">
                         <div
-                          className="modal-button"
+                          className="modal-button dark-mode-text"
                           onClick={() => {
                             closeModal();
                           }}
@@ -31,9 +33,9 @@ export default class Modal extends Component {
                           [ Back to Store ]
                         </div>
                       </Link>
-                      <Link to="/cart">
+                      <Link to="/cart" className="link">
                         <div
-                          className="modal-button"
+                          className="modal-button dark-mode-text"
                           onClick={() => {
                             closeModal();
                           }}
@@ -55,12 +57,12 @@ export default class Modal extends Component {
                       id="modal"
                       className="col-8 mx-auto col-md-6 col-lg-4 text-center p-5"
                     >
-                      <h5 className="modal-text">
+                      <h5 className="modal-text dark-mode-text">
                         Thank you for your purchase!
                       </h5>
-                      <Link to="/">
+                      <Link to="/" className="link">
                         <div
-                          className="modal-button"
+                          className="modal-button dark-mode-text"
                           onClick={() => {
                             closeModal();
                           }}

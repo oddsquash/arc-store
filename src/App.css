@@ -4,7 +4,7 @@
   --darkBackground: #525252;
   --button: #a4b7d460;
   --altButton: #9aa7ba53;
-  --lightGrey: #8a8989;
+  --lightGrey: #949292;
   --mainGrey: #717577c4;
   --darkGrey: ;
 }
@@ -18,6 +18,7 @@ body {
   height: 100vh;
 }
 
+/* Loading */
 .loading {
   display: table;
   width: 30%;
@@ -27,7 +28,6 @@ body {
 .loading h1 {
   display: table-cell;
   vertical-align: middle;
-  width: auto;
   transform: translateY(-65px);
 }
 
@@ -41,6 +41,10 @@ body {
 }
 
 .dark-mode .product-image {
+  box-shadow: 5px 5px 5px 2px rgb(50, 50, 50);
+}
+
+.dark-mode .detail-image {
   box-shadow: 5px 5px 5px 2px rgb(50, 50, 50);
 }
 
@@ -151,10 +155,15 @@ ul {
 }
 
 /* Details page */
+.detail-image {
+  box-shadow: 5px 5px 5px 2px rgb(151, 151, 151);
+}
+
 .button {
   cursor: pointer;
   border-radius: 4px;
   background-color: var(--button);
+  margin-top: 15px !important;
 }
 
 button:focus {
@@ -162,7 +171,7 @@ button:focus {
 }
 
 .cart-button {
-  background-color: var(--cartButton) !important;
+  background-color: rgba(155, 200, 218, 0.625) !important;
   margin-right: 1rem;
 }
 
@@ -218,11 +227,15 @@ button:focus {
 }
 
 #modal {
-  background: var(--background);
+  background: var(--lightBackground);
+}
+
+.dark-mode #modal {
+  background: var(--darkBackground);
 }
 
 .modal-text {
-  color: var(--mainGrey);
+  color: black;
 }
 
 .modal-button {
@@ -230,6 +243,10 @@ button:focus {
   color: black;
   margin: 0.8rem 0 0 0;
   cursor: pointer;
+}
+
+.link:hover {
+  text-decoration: none;
 }
 
 /* Cart */

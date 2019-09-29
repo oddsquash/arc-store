@@ -3,6 +3,9 @@ import { ProductConsumer } from "../context";
 import Product from "./Product";
 import Loading from "./Loading";
 
+/**
+ * Shop component.
+ */
 export default class Shop extends Component {
   constructor(props) {
     super(props);
@@ -12,8 +15,9 @@ export default class Shop extends Component {
     };
   }
 
-  componentWillMount() {}
-
+  /**
+   * Render.
+   */
   render() {
     const { isLoading } = this.state;
     let count = 0;
@@ -31,7 +35,6 @@ export default class Shop extends Component {
     return (
       <>
         {isLoading && <Loading />}
-        {/* <Loading /> */}
         <div className="py-5 shop">
           <div className="container">
             <div className="row">

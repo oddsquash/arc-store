@@ -61,7 +61,7 @@ export default class Details extends Component {
                   <div className="col-10 mx-auto col-md-6 my-3">
                     <img
                       src={img}
-                      className="rounded img-fluid dark"
+                      className="rounded img-fluid dark detail-image"
                       alt="product"
                     />
                     <Gallery images={photos} />
