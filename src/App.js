@@ -5,6 +5,7 @@ import { ProductProvider, ProductConsumer } from "./context";
 import "./App.css";
 import Navbar from "./components/Navbar";
 import Shop from "./components/Shop";
+import ReviewsPage from './components/reviews/ReviewsPage';
 import Contact from "./components/Contact";
 import Cart from "./components/Cart/Cart";
 import Details from "./components/Details";
@@ -25,6 +26,7 @@ function App() {
                   <div className="content">
                     <Switch>
                       <Route path="/" exact component={Shop} />
+                      <Route path="/reviews" component={ReviewsPage} />
                       <Route path="/contact" component={Contact} />
                       <Route path="/cart" component={Cart} />
                       <Route path="/details" component={Details} />
