@@ -42,7 +42,7 @@ export default function Navbar(props) {
                   open={Boolean(anchorEl)}
                   onClose={handleClose}
                 >
-                  <Link to="/" exact className='link'>
+                  <Link to="/" className='link'>
                     <MenuItem style={{ color: 'black' }} onClick={handleClose}>Shop</MenuItem>
                   </Link>
                   <Link to="/reviews" className='link'>
