@@ -17,7 +17,7 @@ export default class Product extends Component {
     });
 
     return (
-      <div className="col-lg-6 col-12 mt-5">
+      <div className="col-lg-6 col-12 mb-5">
         <div className="card product">
           <ProductConsumer>
             {value =>

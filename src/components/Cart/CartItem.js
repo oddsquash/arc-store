@@ -10,7 +10,7 @@ export default function CartItem({ item, value }) {
         <img
           src={img}
           style={{ width: "15rem", height: 'auto' }}
-          className="img-fluid"
+          className="img-fluid rounded"
           alt="product"
         />
         <span className="d-none d-lg-block cart-item-details">{title}</span>

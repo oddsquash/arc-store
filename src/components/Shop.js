@@ -35,7 +35,7 @@ export default class Shop extends Component {
     return (
       <>
         {isLoading && <Loading />}
-        <div className="py-5 shop">
+        <div className="full-screen">
           <div className="container">
             <div className="row">
               <ProductConsumer>

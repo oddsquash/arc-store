@@ -24,7 +24,7 @@ export default function Navbar(props) {
           return (
             <>
               {/* Begin Mobile Menu */}
-              <div className="mobile-menu">
+              <div className="mobile-menu pt-4">
                 <img src={logo} id="logo" alt="logo" />
                 <Button
                   aria-controls="simple-menu"

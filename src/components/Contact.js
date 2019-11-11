@@ -2,7 +2,7 @@ import React from "react";
 
 export default function Contact() {
   return (
-    <div className="container">
+    <div className="container full-screen">
       <div className="row">
         <div className="contact-col">
           <div className="card contact">
