@@ -103,13 +103,13 @@ ul {
   text-align: center;
 }
 
-.mobile-menu .link{
+.mobile-menu .link {
   text-decoration: none;
 }
 
 .mobile-menu img {
-    max-width: 200px;
-  }
+  max-width: 200px;
+}
 
 /* Main Content */
 
@@ -256,10 +256,6 @@ button:focus {
 
 /* Cart */
 
-
-
-
-
 /* Responsive sizing */
 @media screen and (max-width: 450px) {
   #logo {
@@ -315,8 +311,16 @@ button:focus {
 
 @media screen and (max-width: 999px) {
   .mobile-menu {
-    display: block;
+    display: flex;
+    justify-content: center;
+    padding: 10px;
   }
+  
+  .mobile-menu img {
+    max-width: 150px;
+    margin-right: 3rem;
+  }
+
   #nav {
     display: none;
   }

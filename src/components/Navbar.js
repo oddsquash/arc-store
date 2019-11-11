@@ -6,7 +6,7 @@ import { ProductConsumer } from "../context";
 import { Button, Menu, MenuItem } from "@material-ui/core";
 
 export default function Navbar(props) {
-  const { toggleDarkMode } = props
+  const { toggleDarkMode } = props;
   const [anchorEl, setAnchorEl] = React.useState(null);
 
   const handleClick = event => {
@@ -26,14 +26,13 @@ export default function Navbar(props) {
               {/* Begin Mobile Menu */}
               <div className="mobile-menu">
                 <img src={logo} id="logo" alt="logo" />
-                <div></div>
                 <Button
                   aria-controls="simple-menu"
                   aria-haspopup="true"
                   onClick={handleClick}
-                  className='px-3 mt-2'
+                  className="px-3 mt-2"
                 >
-                  Menu
+                  <i className="fas fa-bars fa-2x dark-mode-text"></i>
                 </Button>
                 <Menu
                   id="simple-menu"
@@ -42,26 +41,40 @@ export default function Navbar(props) {
                   open={Boolean(anchorEl)}
                   onClose={handleClose}
                 >
-                  <Link to="/" className='link'>
-                    <MenuItem style={{ color: 'black' }} onClick={handleClose}>Shop</MenuItem>
+                  <Link to="/" className="link">
+                    <MenuItem style={{ color: "black" }} onClick={handleClose}>
+                      Shop
+                    </MenuItem>
                   </Link>
-                  <Link to="/reviews" className='link'>
-                    <MenuItem style={{ color: 'black' }} onClick={handleClose}>Reviews</MenuItem>
+                  <Link to="/reviews" className="link">
+                    <MenuItem style={{ color: "black" }} onClick={handleClose}>
+                      Reviews
+                    </MenuItem>
                   </Link>
-                  <Link to="/contact" className='link'>
-                    <MenuItem style={{ color: 'black' }} onClick={handleClose}>Contact Us</MenuItem>
+                  <Link to="/contact" className="link">
+                    <MenuItem style={{ color: "black" }} onClick={handleClose}>
+                      Contact Us
+                    </MenuItem>
                   </Link>
-                  <Link to="/cart" className='link'>
-                    <MenuItem style={{ color: 'black' }} onClick={handleClose}>Cart</MenuItem>
+                  <Link to="/cart" className="link">
+                    <MenuItem style={{ color: "black" }} onClick={handleClose}>
+                      Cart
+                    </MenuItem>
                   </Link>
+                  <MenuItem
+                    className="nav-text"
+                    onClick={() => toggleDarkMode()}
+                  >
+                    <i className="fas fa-lightbulb" />
+                  </MenuItem>
                 </Menu>
               </div>
               {/* Begin larger menu */}
               <ul id="nav" className="nav-font dark-mode-text">
                 <li>
-                <Link to="/">
-                  <img src={logo} id="logo" alt="logo" />
-                </Link>
+                  <Link to="/">
+                    <img src={logo} id="logo" alt="logo" />
+                  </Link>
                 </li>
                 <li>
                   <Link className="nav-text" to="/">
@@ -84,10 +97,7 @@ export default function Navbar(props) {
                   </Link>
                 </li>
                 <li>
-                  <div
-                    className="nav-text"
-                    onClick={() => toggleDarkMode()}
-                  >
+                  <div className="nav-text" onClick={() => toggleDarkMode()}>
                     <i className="fas fa-lightbulb" />
                   </div>
                 </li>
