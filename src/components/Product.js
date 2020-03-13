@@ -1,20 +1,10 @@
 import React, { Component } from "react";
 import { Link } from "react-router-dom";
 import { ProductConsumer } from "../context";
-import ScrollReveal from "scrollreveal";
 
 export default class Product extends Component {
   render() {
     const { id, title, img, price, sold } = this.props.product;
-    ScrollReveal().reveal(".card", {
-      distance: "150%",
-      origin: "right",
-      duration: 500,
-      easing: "ease-out",
-      interval: 100,
-      opacity: 0
-      // reset: true,
-    });
 
     return (
       <div className="col-lg-6 col-12 mb-5">

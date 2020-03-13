@@ -1,3 +1,16 @@
 {
-  "Reviews": []
+  "Reviews": [
+    {
+      "name": "Paula Coots",
+      "date": "3/4/2020",
+      "review": "Received the large cutting board as a gift! I love it and use it every day for cutting, slicing, and chopping. So useful and solid, while being incredibly beautiful. I appreciate it so much.",
+      "item": "Large Cutting Board"
+    },
+    {
+      "name": "Christine Warren",
+      "date": "3/12/2020",
+      "review": "I am extremely happy with my serving board. It is beautiful, as well as functional. When not in use, it looks lovely on my counter. I highly recommend ARC Woodworking!",
+      "item": "Serving Board"
+    }
+  ]
 }

@@ -21,7 +21,12 @@ export default class Cart extends Component {
                 </>
               );
             } else {
-              return <EmptyCart />;
+              return (
+                <>
+                  <EmptyCart />
+                  <CartTotals value={value} history={this.props.history} />
+                </>
+              );
             }
           }}
         </ProductConsumer>

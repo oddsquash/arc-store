@@ -19,8 +19,8 @@ class ProductProvider extends Component {
    * Component will mount.
    */
   componentWillMount() {
-    localStorage.getItem("state") &&
-      this.setState(JSON.parse(localStorage.getItem("state")));
+    sessionStorage.getItem("state") &&
+      this.setState(JSON.parse(sessionStorage.getItem("state")));
   }
 
   /**
@@ -42,7 +42,7 @@ class ProductProvider extends Component {
    * Set products. Either from data.js or from local storage state object.
    */
   setProducts = () => {
-    if (localStorage.getItem("state") === null) {
+    if (sessionStorage.getItem("state") === null) {
       let products = [];
       storeProducts.forEach(item => {
         const singleItem = { ...item };
@@ -50,7 +50,7 @@ class ProductProvider extends Component {
       });
       this.setState({ products });
     } else {
-      let state = JSON.parse(localStorage.getItem("state"));
+      let state = JSON.parse(sessionStorage.getItem("state"));
       if (state.products) {
         this.setState(state);
       }
@@ -63,7 +63,7 @@ class ProductProvider extends Component {
   saveState = () => {
     let newState = { ...this.state };
     delete newState.modalOpen;
-    localStorage.setItem("state", JSON.stringify(newState));
+    sessionStorage.setItem("state", JSON.stringify(newState));
   };
 
   /**
