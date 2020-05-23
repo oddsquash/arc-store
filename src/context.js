@@ -35,7 +35,8 @@ class ProductProvider extends Component {
    */
   toggleDarkMode = () => {
     let darkMode = !this.state.darkMode;
-    this.setState({ darkMode });
+    this.setState({ darkMode }, () => this.saveState());
+    
   };
 
   /**
