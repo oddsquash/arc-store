@@ -24,9 +24,13 @@ export default class App extends Component {
   }
 
   componentDidMount() {
-    setTimeout(() => this.setState({ isLoading: false }), 2500);
+    setTimeout(() => this.setState({ isLoading: false }), 3000);
   }
 
+  componentWillUnmount() {
+    window.sessionStorage.removeItem('state');
+  }
+  
   render() {
     const { isLoading } = this.state;
 
