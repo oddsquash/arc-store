@@ -10,8 +10,8 @@ export default class Product extends Component {
       <div className="col-lg-6 col-12 mb-5">
         <div className="card product">
           <ProductConsumer>
-            {value =>
-              sold ? (
+            {(value) => (
+              <>
                 <div
                   className="img-container text-center"
                   onClick={() => value.handleDetail(id)}
@@ -21,35 +21,22 @@ export default class Product extends Component {
                       src={img}
                       alt="product"
                       className="card-img-top product-image rounded"
-                      onLoad={this.props.imageLoaded}
-                    />
-                    <p className="product-text-sold">[ Sold Out ]</p>
-                  </Link>
-                </div>
-              ) : (
-                <div
-                  className="img-container text-center"
-                  onClick={() => value.handleDetail(id)}
-                >
-                  <Link to="/details">
-                    <img
-                      src={img}
-                      alt="product"
-                      className="card-img-top product-image rounded"
-                      onLoad={this.props.imageLoaded}
+                      // onLoad={this.props.imageLoaded}
                     />
                     <p className="product-text-details">[ Details ]</p>
                   </Link>
                 </div>
-              )
-            }
+                <div className="desc-text dark-mode-text">
+                  <div>
+                    <p className="text-center pt-3 mb-0">{title}</p>
+                    <p className="text-center">
+                      {sold ? "[ Sold ]" : `$${price}`}
+                    </p>
+                  </div>
+                </div>
+              </>
+            )}
           </ProductConsumer>
-          <div className="desc-text dark-mode-text">
-            <div>
-              <p className="text-center pt-3 mb-0">{title}</p>
-              <p className="text-center">${price}</p>
-            </div>
-          </div>
         </div>
       </div>
     );

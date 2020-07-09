@@ -5,14 +5,14 @@ const ProductContext = React.createContext();
 
 class ProductProvider extends Component {
   state = {
-    products: storeProducts,
+    products: storeProducts.reverse(),
     detailProduct,
     cart: [],
     modalOpen: false,
     cartSubTotal: 0,
     shipping: 0,
     cartTotal: 0,
-    darkMode: false
+    darkMode: false,
   };
 
   /**
@@ -36,7 +36,6 @@ class ProductProvider extends Component {
   toggleDarkMode = () => {
     let darkMode = !this.state.darkMode;
     this.setState({ darkMode }, () => this.saveState());
-    
   };
 
   /**
@@ -45,7 +44,7 @@ class ProductProvider extends Component {
   setProducts = () => {
     if (sessionStorage.getItem("state") === null) {
       let products = [];
-      storeProducts.forEach(item => {
+      storeProducts.forEach((item) => {
         const singleItem = { ...item };
         products = [...products, singleItem];
       });
@@ -70,15 +69,15 @@ class ProductProvider extends Component {
   /**
    * Get item based on id.
    */
-  getItem = id => {
-    const product = this.state.products.find(item => item.id === id);
+  getItem = (id) => {
+    const product = this.state.products.find((item) => item.id === id);
     return product;
   };
 
   /**
    * Updates the detail product.
    */
-  handleDetail = id => {
+  handleDetail = (id) => {
     const product = this.getItem(id);
     this.setState({ detailProduct: product }, () => this.saveState());
   };
@@ -86,7 +85,7 @@ class ProductProvider extends Component {
   /**
    * Add to cart.
    */
-  addToCart = id => {
+  addToCart = (id) => {
     let tempProducts = [...this.state.products];
     const index = tempProducts.indexOf(this.getItem(id)); // using getItem to return the index instead of the id
     const product = tempProducts[index];
@@ -106,7 +105,7 @@ class ProductProvider extends Component {
   /**
    * Open modal.
    */
-  openModal = id => {
+  openModal = (id) => {
     const product = this.getItem(id);
     this.setState(() => {
       return { modalProduct: product, modalOpen: true };
@@ -123,10 +122,10 @@ class ProductProvider extends Component {
   /**
    * Remove single item from cart.
    */
-  removeItem = id => {
+  removeItem = (id) => {
     let tempProducts = [...this.state.products];
     let tempCart = [...this.state.cart];
-    tempCart = tempCart.filter(item => item.id !== id);
+    tempCart = tempCart.filter((item) => item.id !== id);
     const index = tempProducts.indexOf(this.getItem(id));
     let removedProduct = tempProducts[index];
     removedProduct.inCart = false;
@@ -154,7 +153,7 @@ class ProductProvider extends Component {
    */
   addTotals = () => {
     let subTotal = 0;
-    this.state.cart.map(item => (subTotal += item.total));
+    this.state.cart.map((item) => (subTotal += item.total));
     let shipping = 0;
     this.state.cart.forEach(() => (shipping += 10));
     let total = subTotal + shipping;
@@ -169,8 +168,8 @@ class ProductProvider extends Component {
   updateSold = () => {
     let tempProducts = [...this.state.products];
     let tempCart = [...this.state.cart];
-    tempCart.forEach(item => {
-      let index = tempProducts.findIndex(obj => obj.id === item.id);
+    tempCart.forEach((item) => {
+      let index = tempProducts.findIndex((obj) => obj.id === item.id);
       let soldProduct = tempProducts[index];
       soldProduct.sold = true;
       soldProduct.inCart = false;
@@ -193,7 +192,7 @@ class ProductProvider extends Component {
           removeItem: this.removeItem,
           clearCart: this.clearCart,
           updateSold: this.updateSold,
-          toggleDarkMode: this.toggleDarkMode
+          toggleDarkMode: this.toggleDarkMode,
         }}
       >
         {this.props.children}

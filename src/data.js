@@ -1,16 +1,16 @@
 export const storeProducts = [
   {
     id: 1,
-    title: "Medium Cutting Board",
+    title: "Small Cutting Board",
     img: "img/Medium.jpg",
     moreImages: [
       "img/medium_more_1.jpg",
       "img/medium_more_2.jpg",
       "img/medium_more_3.jpg",
       "img/medium_more_4.jpg",
-      "img/medium_more_5.jpg"
+      "img/medium_more_5.jpg",
     ],
-    price: 70,
+    price: 60,
     desc:
       "Made from Cherry, Walnut, and Maple hardwoods. Size: 13.5 x 9 x 1 inch.",
     intro:
@@ -18,7 +18,7 @@ export const storeProducts = [
     info:
       "Made from Cherry, Walnut, and Maple hardwoods. Size: 13.5 x 9 x 1 inch. Sealed with Tung oil* and finished with a mixture of bees wax and mineral oil.  Rubber feet installed on the bottom of the board to prevent slipping and for ease of use. Our boards come with a 1oz. tin of the bees wax and mineral oil mixture to keep your board healthy and looking beautiful.",
     inCart: false,
-    sold: false
+    sold: false,
   },
   {
     id: 2,
@@ -31,7 +31,7 @@ export const storeProducts = [
       "img/large_more_4.jpg",
       "img/large_more_5.jpg",
       "img/large_more_4.jpg",
-      "img/large_more_5.jpg"
+      "img/large_more_5.jpg",
     ],
     price: 100,
     desc:
@@ -41,7 +41,7 @@ export const storeProducts = [
     info:
       "Made from Cherry, Walnut, and Maple hardwoods. Size: 19 x 11 x 1.25 inches. Sealed with Tung oil* and finished with a mixture of bees wax and mineral oil.  Rubber feet installed on the bottom of the board to prevent slipping and for ease of use. Our boards come with a 1oz. tin of the bees wax and mineral oil mixture to keep your board healthy and looking beautiful.",
     inCart: false,
-    sold: true
+    sold: true,
   },
   {
     id: 3,
@@ -54,7 +54,7 @@ export const storeProducts = [
       "img/tray_more_4.jpg",
       "img/tray_more_5.jpg",
       "img/tray_more_4.jpg",
-      "img/tray_more_5.jpg"
+      "img/tray_more_5.jpg",
     ],
     price: 35,
     desc:
@@ -64,7 +64,7 @@ export const storeProducts = [
     info:
       "Made from Cherry, Walnut, and Maple hardwoods. Size: 20 x 6 x 0.75 inches. Sealed with 3 coats of Tung oil* and finished with a mixture of bees wax and mineral oil. Our boards come with a 1oz. tin of the bees wax and mineral oil mixture to keep your board healthy and looking beautiful.",
     inCart: false,
-    sold: true
+    sold: true,
   },
   {
     id: 4,
@@ -75,9 +75,9 @@ export const storeProducts = [
       "img/Thompson_2.jpg",
       "img/Thompson_3.jpg",
       "img/Thompson_4.jpg",
-      "img/Thompson_5.jpg"
+      "img/Thompson_5.jpg",
     ],
-    price: 120,
+    price: 140,
     desc:
       "Made from Walnut and Maple hardwoods. Overall size: 24 x 12 x 1.125 inches.",
     intro:
@@ -85,28 +85,19 @@ export const storeProducts = [
     info:
       "Made from Walnut and Maple hardwoods. Size: 24 x 12 x 1.125 inches. Sealed with Tung oil* and finished with a mixture of bees wax and mineral oil. Rubber feet installed on the bottom of the board to prevent slipping and for ease of use. Our boards come with a 1oz. tin of the bees wax and mineral oil mixture to keep your board healthy and looking beautiful.",
     inCart: false,
-    sold: true
-  }
+    sold: true,
+  },
 ];
 
 export const detailProduct = {
-  id: 1,
-  title: "Medium Cutting Board",
-  img: "img/Medium.jpg",
-  moreImages: [
-    "img/medium_more_1.jpg",
-    "img/medium_more_2.jpg",
-    "img/medium_more_3.jpg",
-    "img/medium_more_4.jpg",
-    "img/medium_more_5.jpg"
-  ],
-  price: 70,
-  desc:
-    "Made from Cherry, Walnut, and Maple hardwoods. Size: 13.5 x 9 x 1 inch.",
-  intro:
-    "Beautiful cutting boards are a focal point of the kitchen and a talking point with friends and family. We know you will enjoy this piece of functional art that we put much effort and love into.",
-  info:
-    "Made from Cherry, Walnut, and Maple hardwoods. Size: 13.5 x 9 x 1 inch Sealed with Tung oil* and finished with a mixture of bees wax and mineral oil.  Rubber feet installed on the bottom of the board to prevent slipping and for ease of use. Our boards come with a 1oz. tin of the bees wax and mineral oil mixture to keep your board healthy and looking beautiful.",
-  inCart: false,
-  sold: false
+  id: "",
+  title: "",
+  img: "",
+  moreImages: [],
+  price: "",
+  desc: "",
+  intro: "",
+  info: "",
+  inCart: "",
+  sold: "",
 };
