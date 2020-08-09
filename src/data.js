@@ -12,11 +12,11 @@ export const storeProducts = [
     ],
     price: 60,
     desc:
-      "Made from Cherry, Walnut, and Maple hardwoods. Size: 13.5 x 9 x 1 inch.",
+      "Made from cherry, walnut, and maple hardwoods. Size: 13.5 x 9 x 1 inch.",
     intro:
       "Beautiful cutting boards are a focal point of the kitchen and a talking point with friends and family. We know you will enjoy this piece of functional art that we put much effort and love into.",
     info:
-      "Made from Cherry, Walnut, and Maple hardwoods. Size: 13.5 x 9 x 1 inch. Sealed with Tung oil* and finished with a mixture of bees wax and mineral oil.  Rubber feet installed on the bottom of the board to prevent slipping and for ease of use. Our boards come with a 1oz. tin of the bees wax and mineral oil mixture to keep your board healthy and looking beautiful.",
+      "Made from cherry, walnut, and maple hardwoods. Size: 13.5 x 9 x 1 inch. Sealed with Tung oil* and finished with a mixture of bees wax and mineral oil.  Rubber feet installed on the bottom of the board to prevent slipping and for ease of use. Our boards come with a 1oz. tin of the bees wax and mineral oil mixture to keep your board healthy and looking beautiful.",
     inCart: false,
     sold: false,
   },
@@ -35,11 +35,11 @@ export const storeProducts = [
     ],
     price: 100,
     desc:
-      "Made from Cherry, Walnut, and Maple hardwoods. Size: 19 x 11 x 1.25 inches.",
+      "Made from cherry, walnut, and maple hardwoods. Size: 19 x 11 x 1.25 inches.",
     intro:
       "Beautiful cutting boards are a focal point of the kitchen and a talking point with friends and family. We know you will enjoy this piece of functional art that we put much effort and love into.",
     info:
-      "Made from Cherry, Walnut, and Maple hardwoods. Size: 19 x 11 x 1.25 inches. Sealed with Tung oil* and finished with a mixture of bees wax and mineral oil.  Rubber feet installed on the bottom of the board to prevent slipping and for ease of use. Our boards come with a 1oz. tin of the bees wax and mineral oil mixture to keep your board healthy and looking beautiful.",
+      "Made from cherry, walnut, and maple hardwoods. Size: 19 x 11 x 1.25 inches. Sealed with Tung oil* and finished with a mixture of bees wax and mineral oil.  Rubber feet installed on the bottom of the board to prevent slipping and for ease of use. Our boards come with a 1oz. tin of the bees wax and mineral oil mixture to keep your board healthy and looking beautiful.",
     inCart: false,
     sold: true,
   },
@@ -58,11 +58,11 @@ export const storeProducts = [
     ],
     price: 35,
     desc:
-      "Made from Cherry, Walnut, and Maple hardwoods. Overall size: 20 x 6 x 0.75 inches.",
+      "Made from cherry, walnut, and maple hardwoods. Overall size: 20 x 6 x 0.75 inches.",
     intro:
       "Serve up some delicious appetizers on this beautiful wooden serving board! We know you will enjoy this piece of functional art that we put much effort and love into.",
     info:
-      "Made from Cherry, Walnut, and Maple hardwoods. Size: 20 x 6 x 0.75 inches. Sealed with 3 coats of Tung oil* and finished with a mixture of bees wax and mineral oil. Our boards come with a 1oz. tin of the bees wax and mineral oil mixture to keep your board healthy and looking beautiful.",
+      "Made from cherry, walnut, and maple hardwoods. Size: 20 x 6 x 0.75 inches. Sealed with 3 coats of Tung oil* and finished with a mixture of bees wax and mineral oil. Our boards come with a 1oz. tin of the bees wax and mineral oil mixture to keep your board healthy and looking beautiful.",
     inCart: false,
     sold: true,
   },
@@ -79,11 +79,56 @@ export const storeProducts = [
     ],
     price: 140,
     desc:
-      "Made from Walnut and Maple hardwoods. Overall size: 24 x 12 x 1.125 inches.",
+      "Made from walnut and maple hardwoods. Overall size: 24 x 12 x 1.125 inches.",
     intro:
       "Beautiful cutting boards are a focal point of the kitchen and a talking point with friends and family. We know you will enjoy this piece of functional art that we put much effort and love into.",
     info:
-      "Made from Walnut and Maple hardwoods. Size: 24 x 12 x 1.125 inches. Sealed with Tung oil* and finished with a mixture of bees wax and mineral oil. Rubber feet installed on the bottom of the board to prevent slipping and for ease of use. Our boards come with a 1oz. tin of the bees wax and mineral oil mixture to keep your board healthy and looking beautiful.",
+      "Made from walnut and maple hardwoods. Size: 24 x 12 x 1.125 inches. Sealed with Tung oil* and finished with a mixture of bees wax and mineral oil. Rubber feet installed on the bottom of the board to prevent slipping and for ease of use. Our boards come with a 1oz. tin of the bees wax and mineral oil mixture to keep your board healthy and looking beautiful.",
+    inCart: false,
+    sold: true,
+  },
+  {
+    id: 5,
+    title: "Medium Cutting Board",
+    img: "img/T1.jpg",
+    moreImages: ["img/T1.jpg"],
+    price: 80,
+    desc:
+      "Made from cherry, walnut, and maple hardwoods. Overall size: 17 x 11 x 1.125 inches.",
+    intro:
+      "Beautiful cutting boards are a focal point of the kitchen and a talking point with friends and family. We know you will enjoy this piece of functional art that we put much effort and love into.",
+    info:
+      "Made from cherry, walnut, and maple hardwoods. Size: 17 x 11 x 1.125 inches. Sealed with Tung oil* and finished with a mixture of bees wax and mineral oil. Rubber feet installed on the bottom of the board to prevent slipping and for ease of use. Our boards come with a 1oz. tin of the bees wax and mineral oil mixture to keep your board healthy and looking beautiful.",
+    inCart: false,
+    sold: true,
+  },
+  {
+    id: 6,
+    title: "Medium Cutting Board",
+    img: "img/T2.jpg",
+    moreImages: ["img/T2.jpg"],
+    price: 80,
+    desc:
+      "Made from cherry, walnut, and maple hardwoods. Overall size: 17 x 11 x 1.125 inches.",
+    intro:
+      "Beautiful cutting boards are a focal point of the kitchen and a talking point with friends and family. We know you will enjoy this piece of functional art that we put much effort and love into.",
+    info:
+      "Made from cherry, walnut, and maple hardwoods. Size: 17 x 11 x 1.125 inches. Sealed with Tung oil* and finished with a mixture of bees wax and mineral oil. Rubber feet installed on the bottom of the board to prevent slipping and for ease of use. Our boards come with a 1oz. tin of the bees wax and mineral oil mixture to keep your board healthy and looking beautiful.",
+    inCart: false,
+    sold: true,
+  },
+  {
+    id: 7,
+    title: "XL Cutting Board",
+    img: "img/T3.jpg",
+    moreImages: ["img/T3.jpg"],
+    price: 120,
+    desc:
+      "Made from cherry, walnut, and maple hardwoods. Overall size: 24 x 12 x 1.125 inches.",
+    intro:
+      "Beautiful cutting boards are a focal point of the kitchen and a talking point with friends and family. We know you will enjoy this piece of functional art that we put much effort and love into.",
+    info:
+      "Made from cherry, walnut, and maple hardwoods. Size: 24 x 12 x 1.125 inches. Sealed with Tung oil* and finished with a mixture of bees wax and mineral oil. Rubber feet installed on the bottom of the board to prevent slipping and for ease of use. Our boards come with a 1oz. tin of the bees wax and mineral oil mixture to keep your board healthy and looking beautiful.",
     inCart: false,
     sold: true,
   },

@@ -22,38 +22,40 @@ export default class Details extends Component {
               sold
             } = value.detailProduct;
 
-            const photos = [
-              {
-                photo: moreImages[0],
-                number: 1,
-                caption: title,
-                subcaption: desc
-              },
-              {
-                photo: moreImages[1],
-                number: 2,
-                caption: title,
-                subcaption: desc
-              },
-              {
-                photo: moreImages[2],
-                number: 3,
-                caption: title,
-                subcaption: desc
-              },
-              {
-                photo: moreImages[3],
-                number: 4,
-                caption: title,
-                subcaption: desc
-              },
-              {
-                photo: moreImages[4],
-                number: 5,
-                caption: title,
-                subcaption: desc
-              }
-            ];
+            // I was passing this to Gallery but simplified it to just the photos and only displays as many photos as are available.
+            //
+            // const images = [
+            //   {
+            //     photo: moreImages[0],
+            //     number: 1,
+            //     caption: title,
+            //     subcaption: desc
+            //   },
+            //   {
+            //     photo: moreImages[1],
+            //     number: 2,
+            //     caption: title,
+            //     subcaption: desc
+            //   },
+            //   {
+            //     photo: moreImages[2],
+            //     number: 3,
+            //     caption: title,
+            //     subcaption: desc
+            //   },
+            //   {
+            //     photo: moreImages[3],
+            //     number: 4,
+            //     caption: title,
+            //     subcaption: desc
+            //   },
+            //   {
+            //     photo: moreImages[4],
+            //     number: 5,
+            //     caption: title,
+            //     subcaption: desc
+            //   }
+            // ];
 
             return (
               <div className="container py-5">
@@ -64,7 +66,7 @@ export default class Details extends Component {
                       className="rounded img-fluid dark detail-image"
                       alt="product"
                     />
-                    <Gallery images={photos} />
+                    <Gallery images={moreImages} />
                   </div>
                   <div className="col-10 mx-auto col-md-6 my-3 dark-mode-title">
                     {!sold ? (
