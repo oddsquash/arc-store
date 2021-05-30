@@ -23,14 +23,14 @@ export default class Product extends Component {
                       className="card-img-top product-image rounded"
                       // onLoad={this.props.imageLoaded}
                     />
-                    <p className="product-text-details">[ Details ]</p>
+                    <p className="product-text-details">Details</p>
                   </Link>
                 </div>
                 <div className="desc-text dark-mode-text">
                   <div>
                     <p className="text-center pt-3 mb-0">{title}</p>
                     <p className="text-center">
-                      {sold ? "[ Sold ]" : `$${price}`}
+                      {sold ? "Sold" : `$${price}`}
                     </p>
                   </div>
                 </div>

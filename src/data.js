@@ -18,7 +18,7 @@ export const storeProducts = [
     info:
       "Made from cherry, walnut, and maple hardwoods. Size: 13.5 x 9 x 1 inch. Sealed with Tung oil* and finished with a mixture of bees wax and mineral oil.  Rubber feet installed on the bottom of the board to prevent slipping and for ease of use. Our boards come with a 1oz. tin of the bees wax and mineral oil mixture to keep your board healthy and looking beautiful.",
     inCart: false,
-    sold: false,
+    sold: true,
   },
   {
     id: 2,
@@ -129,6 +129,51 @@ export const storeProducts = [
       "Beautiful cutting boards are a focal point of the kitchen and a talking point with friends and family. We know you will enjoy this piece of functional art that we put much effort and love into.",
     info:
       "Made from cherry, walnut, and maple hardwoods. Size: 24 x 12 x 1.125 inches. Sealed with Tung oil* and finished with a mixture of bees wax and mineral oil. Rubber feet installed on the bottom of the board to prevent slipping and for ease of use. Our boards come with a 1oz. tin of the bees wax and mineral oil mixture to keep your board healthy and looking beautiful.",
+    inCart: false,
+    sold: true,
+  },
+  {
+    id: 8,
+    title: "Large Cutting Board",
+    img: "img/TheThompson5.jpg",
+    moreImages: ["img/TheThompson5.jpg"],
+    price: 120,
+    desc:
+      "A walnut board with maple inlays. Overall size: 20 x 12 x 1.125 inches.",
+    intro:
+      "Beautiful cutting boards are a focal point of the kitchen and a talking point with friends and family. We know you will enjoy this piece of functional art that we put much effort and love into.",
+    info:
+      "A walnut board with maple inlays. Size: 20 x 12 x 1.125 inches. Sealed with Tung oil* and finished with a mixture of bees wax and mineral oil. Rubber feet installed on the bottom of the board to prevent slipping and for ease of use. Our boards come with a 1oz. tin of the bees wax and mineral oil mixture to keep your board healthy and looking beautiful.",
+    inCart: false,
+    sold: true,
+  },
+  {
+    id: 9,
+    title: "Large Cutting Board",
+    img: "img/TheThompson6.jpg",
+    moreImages: ["img/TheThompson6.jpg"],
+    price: 120,
+    desc:
+      "A walnut board with maple inlays. Overall size: 20 x 12 x 1.125 inches.",
+    intro:
+      "Beautiful cutting boards are a focal point of the kitchen and a talking point with friends and family. We know you will enjoy this piece of functional art that we put much effort and love into.",
+    info:
+      "A walnut board with maple inlays. Size: 20 x 12 x 1.125 inches. Sealed with Tung oil* and finished with a mixture of bees wax and mineral oil. Rubber feet installed on the bottom of the board to prevent slipping and for ease of use. Our boards come with a 1oz. tin of the bees wax and mineral oil mixture to keep your board healthy and looking beautiful.",
+    inCart: false,
+    sold: true,
+  },
+  {
+    id: 10,
+    title: "Medium Cutting Board",
+    img: "img/Thompson7.jpg",
+    moreImages: ["img/Thompson7.jpg"],
+    price: 70,
+    desc:
+      "A maple board with walnut and cherry inlays. Overall size: 17 x 10 x 1 (inches).",
+    intro:
+      "Beautiful cutting boards are a focal point of the kitchen and a talking point with friends and family. We know you will enjoy this piece of functional art that we put much effort and love into.",
+    info:
+      "A walnut board with maple inlays. Size: 20 x 12 x 1.125 inches. Sealed with Tung oil* and finished with a mixture of bees wax and mineral oil. Rubber feet installed on the bottom of the board to prevent slipping and for ease of use. Our boards come with a 1oz. tin of the bees wax and mineral oil mixture to keep your board healthy and looking beautiful.",
     inCart: false,
     sold: true,
   },

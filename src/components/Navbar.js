@@ -589,17 +589,17 @@ export default function Navbar(props) {
                 </li>
                 <li>
                   <Link className="nav-text" to="/">
-                    [ Shop ]
+                    Shop
                   </Link>
                 </li>
                 <li>
                   <Link className="nav-text" to="/reviews">
-                    [ Reviews ]
+                    Reviews
                   </Link>
                 </li>
                 <li>
                   <Link className="nav-text" to="/contact">
-                    [ Contact Us ]
+                    Contact Us
                   </Link>
                 </li>
                 <li>

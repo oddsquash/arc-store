@@ -18,14 +18,12 @@ class Gallery extends Component {
   render() {
     return (
       <>
-        <div>
-          <button
-            className="button pt-1 shadow-sm my-1 border-0 alt-button dark-mode-text"
-            onClick={this.toggleGallery}
-          >
-            [ More photos ]
-          </button>
-        </div>
+        <button
+          className="button pt-1 shadow-sm my-1 border-0 alt-button dark-mode-text"
+          onClick={this.toggleGallery}
+        >
+          [ More photos ]
+        </button>
         <ReactBnbGallery
           show={this.state.galleryOpened}
           photos={this.props.images}

@@ -20,16 +20,6 @@ export default function Contact() {
               <p className="card-text dark-mode-text">
                 Email: arc.woodworking@yahoo.com
               </p>
-              <h6 className="dark-mode-text">
-                Sign up{" "}
-                <a
-                  href="mailto:arc.woodworking@yahoo.com?Subject=Email subscription&body=Please add me to your mailing list!"
-                  target="_top"
-                >
-                  [ here ]
-                </a>{" "}
-                to receive email updates when new products become available!
-              </h6>
             </div>
           </div>
         </div>
